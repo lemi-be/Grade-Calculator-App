@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: rgb(249, 218, 252);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.containerLevelZero{
+    /* This a container that contains whole things */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.containerLevelOne {
+    /* The Main app container */
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.appSpace {
+    /* This is the space for the whole workspace */
+    background-color: rgb(130, 101, 133);
+    max-width: fit-content; 
+    width: fit-content;
+    min-width: 30vw;
+    height: fit-content;
+    padding: 1rem;
+    overflow: hidden;
+    border-radius: 20px;
+    
+}
+.appSpace form {
+    overflow: hidden;
+}
+
+.appSpace form input {
+    max-width: 2rem;
+    background-color: rgb(130, 101, 133);
+    border: 0;
+    border-left: 2px  solid;
+    padding: .5rem;
+        
+}
+
+label {
+    color: rgb(249, 218, 252);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.courseOne, .courseTwo, .courseThree {
+    border: 2px solid;
+    margin-block: .5rem;
+    border-radius: 20px;
+    padding-inline: .5rem;
+    overflow: hidden;
+    
+}
+
+#calculateBtn {
+    max-width: unset;
+    border:  1px solid white;
+    border-radius: 10px;
+    color: rgb(40, 5, 44);
+    background-color: rgb(249, 218, 252);
+
+    
+}
+
+.footer {
+    /* this a footer container inside the .containerlevelZero */
+    height: 10vh;
+    text-align: center;
+}
