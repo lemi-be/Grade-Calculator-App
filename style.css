@@ -130,7 +130,7 @@ button:focus {
 }
 
 #yourGrade, #TotalCredit, #TotalPoint {
-    width: 70px;
+    width: 80px;
     margin-inline: 1rem;
     background-color: rgb(130, 101, 133);
     border: 0;

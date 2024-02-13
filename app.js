@@ -72,7 +72,7 @@ function Calculate() {
     let FinalGPA = TotalGradePoints / TotalCreditHours;
     totalCredit.value = TotalCreditHours;
     totalPoint.value = TotalGradePoints;
-    yourGrade.value = parseFloat(FinalGPA);
+    yourGrade.value = parseInt(FinalGPA);
 }
 
 // function to calculate the GPA
