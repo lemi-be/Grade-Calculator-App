@@ -2,12 +2,13 @@
 const courseContainer = document.getElementsByClassName('courseContainer');
 // A button to add more subjects
 const addSubjectBtn = document.getElementById('addSubjectBtn');
-
-
+// To calculate
 const calculateBtn = document.getElementById('calculateBtn');
 // To display the calculated Grade
 const calculationDisplay = document.getElementById('Calulated');
+let totalCredit = document.getElementById('TotalCredit')
 let yourGrade = document.getElementById('yourGrade');
+let totalPoint = document.getElementById('TotalPoint')
 // This contains all the user input field
 let userInput = document.getElementById('userInput');
 
@@ -22,12 +23,14 @@ addSubjectBtn.addEventListener('click', function() {
 
 
 function Calculate() {
-    // Total Grade 
-    let TotalGrade = 0;
+    // Total Grade Points and Credit Hour 
+    let TotalGradePoints = 0;
+    let TotalCreditHours = 0;
 
     for (i = 0; i < courseContainer.length; i++) {
         // To get the Sudents Grade
         let selectedGrade = courseContainer[i].querySelector('#Grade');
+        let CreditHour = courseContainer[i].querySelector('#creditHr');
         let FinalGrade = selectedGrade.value;
         
         // To change the Grading format to numbers
@@ -58,23 +61,18 @@ function Calculate() {
         } else if (selectedGrade.value === 'NG') {
             FinalGrade = 'NG';
         }
-    // Adding the Grades together
-        TotalGrade += FinalGrade;
-        
+
+        let FinalCredit = parseFloat(CreditHour.value);
+        TotalCreditHours += FinalCredit; 
+        TotalGradePoints += FinalCredit * FinalGrade;
        
     }
     
     
-    
-    for (i = 0; i < courseContainer.length; i++) {
-        let CreditHour = courseContainer[i].querySelector('#creditHr')
-        let FinalCredit = CreditHour.value;
-
-        console.log(FinalCredit);
-
-
-    }
-    yourGrade.value = TotalGrade;
+    let FinalGPA = TotalGradePoints / TotalCreditHours;
+    totalCredit.value = TotalCreditHours;
+    totalPoint.value = TotalGradePoints;
+    yourGrade.value = parseFloat(FinalGPA);
 }
 
 // function to calculate the GPA
