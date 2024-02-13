@@ -14,22 +14,67 @@
         <div class="containerLevelOne">
             <div class="appSpace">
                 <div class="formContainer" >
-                    <form action="">
+                    <form action="get">
                         <div id="userInput">
                             <div class="courseContainer">
                                 <input type="text" name="CourseName" id="CourseName" placeholder="Course Name (Eg: Math)" style="border: none;">
-                                <input type="text" name="Grade" id="Grade" placeholder="Grade(A+)" st>
-                                <input type="text" name="creditHr" id="Grade" placeholder="Credit Hr">
+                                <select name="Grade" id="Grade">
+                                    <option value="A+">A+</option>
+                                    <option value="A">A</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B">B</option>
+                                    <option value="B-">B-</option>
+                                    <option value="C+">C+</option>
+                                    <option value="C">C</option>
+                                    <option value="C-">C-</option>
+                                    <option value="D+">D+</option>
+                                    <option value="D">D</option>
+                                    <option value="D-">D-</option>
+                                    <option value="F">F</option>
+                                    <option value="NG">NG</option>
+                                </select>
+                                <input type="text" name="creditHr" id="creditHr" placeholder="Credit Hr" maxlength="2">
                             </div>
                             <div class="courseContainer">
                                 <input type="text" name="CourseName" id="CourseName" placeholder="Course Name (Eg: Math)" style="border: none;">
-                                <input type="text" name="Grade" id="Grade" placeholder="Grade(A+)">
-                                <input type="text" name="creditHr" id="Grade" placeholder="Credit Hr">
+                                <select name="Grade" id="Grade">
+                                    <option value="A+">A+</option>
+                                    <option value="A">A</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B">B</option>
+                                    <option value="B-">B-</option>
+                                    <option value="C+">C+</option>
+                                    <option value="C">C</option>
+                                    <option value="C-">C-</option>
+                                    <option value="D+">D+</option>
+                                    <option value="D">D</option>
+                                    <option value="D-">D-</option>
+                                    <option value="F">F</option>
+                                    <option value="NG">NG</option>
+                                </select>
+                                <input type="text" name="creditHr" id="creditHr" placeholder="Credit Hr" maxlength="2">
                             </div>
                             <div class="courseContainer">
                                 <input type="text" name="CourseName" id="CourseName" placeholder="Course Name (Eg: Math)" style="border: none;">
-                                <input type="text" name="Grade" id="Grade" placeholder="Grade(A+)">
-                                <input type="text" name="creditHr" id="Grade" placeholder="Credit Hr">
+                                <select name="Grade" id="Grade">
+                                    <option value="A+">A+</option>
+                                    <option value="A">A</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B">B</option>
+                                    <option value="B-">B-</option>
+                                    <option value="C+">C+</option>
+                                    <option value="C">C</option>
+                                    <option value="C-">C-</option>
+                                    <option value="D+">D+</option>
+                                    <option value="D">D</option>
+                                    <option value="D-">D-</option>
+                                    <option value="F">F</option>
+                                    <option value="NG">NG</option>
+                                </select>
+                                <input type="text" name="creditHr" id="creditHr" placeholder="Credit Hr" maxlength="2">
                             </div>
                         </div>
                         <div class="addSubjectIcon" id="addSubjectBtn"> 
@@ -40,6 +85,12 @@
                         </div>
                         
                     </form>
+                </div>
+                <div id="Calulated">
+                    <div class="GPAdisplay">
+                        <p>Your Grade is: </p>
+                    <input type="text" name="yourGrade" id="yourGrade" readonly>
+                    </div> 
                 </div>
             </div>
         </div>
