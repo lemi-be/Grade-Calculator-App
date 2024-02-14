@@ -62,7 +62,7 @@ function Calculate() {
             FinalGrade = 'NG';
         }
 
-        let FinalCredit = parseFloat(CreditHour.value);
+        let FinalCredit = Math.round(parseFloat(CreditHour.value));
         TotalCreditHours += FinalCredit; 
         TotalGradePoints += FinalCredit * FinalGrade;
        
@@ -72,7 +72,7 @@ function Calculate() {
     let FinalGPA = TotalGradePoints / TotalCreditHours;
     totalCredit.value = TotalCreditHours;
     totalPoint.value = TotalGradePoints;
-    yourGrade.value = parseInt(FinalGPA);
+    yourGrade.value = parseFloat(FinalGPA.toFixed(4));
 }
 
 // function to calculate the GPA
